@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="100.0" prefWidth="528.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <Label fx:id="txtTitle" layoutX="92.0" layoutY="33.0" maxHeight="100.0" maxWidth="417.0" minHeight="24.0" minWidth="104.0" mouseTransparent="true" prefHeight="63.0" prefWidth="409.0" style="-fx-alignment: center;" text="Label" textFill="#2f2e2e" wrapText="true">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+      <styleClass>
+         <String fx:value="custom-button" />
+         <String fx:value="text_jp_name_18" />
+      </styleClass>
+    </Label>
+    <ImageView fx:id="imgCover" fitHeight="90.0" fitWidth="70.0" layoutX="11.0" layoutY="5.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.4), 3, 0.0, 2, 2);">
+    </ImageView>
+    <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#0a4277" height="22.0" layoutX="93.0" layoutY="6.0" mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="115.0">
+      <effect>
+         <InnerShadow blurType="TWO_PASS_BOX" color="#cdc9c9" />
+      </effect></Rectangle>
+    <Label fx:id="txtId" alignment="CENTER" layoutX="106.0" layoutY="7.0" mouseTransparent="true" prefHeight="19.0" prefWidth="94.0" styleClass="text_jp_14" text="XXX-100" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="13.0" />
+        </font>
+    </Label>
+    <Label fx:id="txtMaker" layoutX="236.0" layoutY="7.0" mouseTransparent="true" prefHeight="19.0" prefWidth="190.0" styleClass="text_jp_14" text="XXX-100" textFill="#6c6969">
+        <font>
+            <Font name="System Bold" size="13.0" />
+        </font>
+    </Label>
+   <stylesheets>
+      <URL value="@../css/font.css" />
+      <URL value="@../css/japsearch.css" />
+   </stylesheets>
+</fx:root>

@@ -1,0 +1,41 @@
+.custom-button {
+    -fx-border-color: #AAAAAA;
+    -fx-border-insets: 1;
+    -fx-border-radius: 4;
+}
+/*
+.list-view .scroll-bar:vertical .increment-arrow,
+.list-view .scroll-bar:vertical .decrement-arrow,
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+}*/
+
+.list-view .scroll-bar,
+.list-view .scroll-bar:vertical .track-background,
+.list-view .scroll-bar:vertical .track
+ {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0.0;
+}
+
+.list-view .scroll-bar:vertical .thumb,
+.list-view .scroll-bar:horizontal .thumb {
+    -fx-background-color: #BCBCBC;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 1.0;
+}
+
+.list-view .list-cell {
+    -fx-background-insets: 0.0;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: #DADAEF;
+}
+
+.separator *.line {
+-fx-border-style: solid;
+-fx-border-width: 1px;
+-fx-border-color: #CACACA;
+}

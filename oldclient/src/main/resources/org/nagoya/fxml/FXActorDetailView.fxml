@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="661.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#0a4277" height="22.0" layoutX="43.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="300.0">
+         <effect>
+            <InnerShadow color="#cfcdcd" />
+         </effect></Rectangle>
+        <Label fx:id="txtYomi" layoutX="59.0" layoutY="12.0" prefHeight="19.0" prefWidth="275.0" styleClass="text_jp_12" text="さわむられいこ（たかさかほなみ、たかさかますみ）" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#324354" height="140.0" layoutX="25.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="531.0" />
+        <ImageView fx:id="imgDmm" fitHeight="96.0" fitWidth="96.0" layoutX="35.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.4), 3, 0.0, 2, 2);" />
+        <Label layoutX="35.0" layoutY="81.0" text="DMM" textFill="WHITE">
+            <font>
+                <Font name="Yu Gothic UI Regular" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="imgJav" fitHeight="96.0" fitWidth="96.0" layoutX="138.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.4), 3, 0.0, 2, 2);" />
+        <Label layoutX="138.0" layoutY="81.0" text="JavBus" textFill="WHITE">
+            <font>
+                <Font name="Yu Gothic UI Regular" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="imgLocal" fitHeight="96.0" fitWidth="96.0" layoutX="242.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.4), 3, 0.0, 2, 2);" />
+        <Label layoutX="242.0" layoutY="81.0" text="Local" textFill="WHITE">
+            <font>
+                <Font name="Yu Gothic UI Regular" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="imgHd" fitHeight="96.0" fitWidth="96.0" layoutX="346.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.4), 3, 0.0, 2, 2);" />
+        <ImageView fx:id="imgCustom" fitHeight="96.0" fitWidth="96.0" layoutX="450.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.4), 3, 0.0, 2, 2);" />
+        <Label layoutX="450.0" layoutY="81.0" text="Custom" textFill="WHITE">
+            <font>
+                <Font name="Yu Gothic UI Regular" size="12.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#ffffff65" height="43.0" layoutX="35.0" layoutY="232.0" stroke="#81a3e2" width="509.0" />
+        <Label layoutX="45.0" layoutY="248.0" text="DMM" />
+        <Label layoutX="294.0" layoutY="248.0" text="JavBus" />
+        <JFXTextField fx:id="txtUrlDmm" alignment="CENTER" layoutX="82.0" layoutY="238.0" opacity="0.96" prefHeight="30.0" prefWidth="80.0" text="123" unFocusColor="#3c4079">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtUrlJav" alignment="CENTER" layoutX="342.0" layoutY="238.0" opacity="0.96" prefHeight="30.0" prefWidth="80.0" text="123" unFocusColor="#3c4079">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </JFXTextField>
+        <JFXButton layoutX="172.0" layoutY="239.0" maxHeight="50.0" maxWidth="45.0" minHeight="29.0" minWidth="45.0" onAction="#doSaveDmm" prefHeight="29.0" prefWidth="45.0" styleClass="custom-button2" textFill="#464545" textOverrun="CLIP">
+            <graphic>
+                <FontAwesomeIconView fill="#4d4b4b" glyphName="USER_PLUS" size="22" />
+            </graphic>
+        </JFXButton>
+        <JFXButton layoutX="433.0" layoutY="239.0" maxHeight="50.0" maxWidth="45.0" minHeight="29.0" minWidth="45.0" onAction="#doSaveJav" prefHeight="29.0" prefWidth="45.0" styleClass="custom-button2" textFill="#464545" textOverrun="CLIP">
+            <graphic>
+                <FontAwesomeIconView fill="#4d4b4b" glyphName="USER_PLUS" size="22" />
+            </graphic>
+        </JFXButton>
+        <JFXButton layoutX="222.0" layoutY="239.0" maxHeight="50.0" maxWidth="45.0" minHeight="29.0" minWidth="45.0" onAction="#doOpenDmm" prefHeight="29.0" prefWidth="45.0" styleClass="custom-button2" textFill="#464545" textOverrun="CLIP">
+            <graphic>
+                <FontAwesomeIconView fill="#4d4b4b" glyphName="WINDOWS" size="22" />
+            </graphic>
+        </JFXButton>
+        <JFXButton layoutX="484.0" layoutY="239.0" maxHeight="50.0" maxWidth="45.0" minHeight="29.0" minWidth="45.0" onAction="#doOpenJav" prefHeight="29.0" prefWidth="45.0" styleClass="custom-button2" textFill="#464545" textOverrun="CLIP">
+            <graphic>
+                <FontAwesomeIconView fill="#4d4b4b" glyphName="WINDOWS" size="22" />
+            </graphic>
+        </JFXButton>
+        <JFXTextField fx:id="txtName" editable="false" layoutX="43.0" layoutY="31.0" opacity="0.96" prefHeight="39.0" prefWidth="318.0" styleClass="text_jp_20" text="澤村レイコ（高坂保奈美、高坂ますみ）" unFocusColor="#ffffff00">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXTextField>
+        <JFXButton layoutX="555.0" layoutY="239.0" maxHeight="50.0" maxWidth="96.0" minHeight="29.0" minWidth="45.0" onAction="#doFindDmm" prefHeight="30.0" prefWidth="96.0" styleClass="custom-button" text="Update" textFill="#464545" textOverrun="CLIP">
+            <graphic>
+                <FontAwesomeIconView fill="#4d4b4b" glyphName="FILE" size="22" />
+            </graphic>
+        </JFXButton>
+        <JFXButton layoutX="564.0" layoutY="194.0" onAction="#doCustomize" prefHeight="30.0" prefWidth="87.0" styleClass="custom-button" text="Customize" />
+        <Label fx:id="txtSize" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="371.0" layoutY="38.0" prefHeight="19.0" prefWidth="263.0" styleClass="text_jp_name_13" text="T170cm B87cm(Dカップ) W59cm H87cm" textFill="#6e6e6e">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtBirth" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" layoutX="371.0" layoutY="14.0" prefHeight="20.0" prefWidth="122.0" styleClass="text_jp_name_18" text="8888-88-88" textFill="#6e6e6e">
+            <font>
+                <Font name="Yu Gothic Medium" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtAge" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="464.0" layoutY="11.0" prefHeight="20.0" prefWidth="46.0" styleClass="text_jp_20" text="88" textFill="#ff87a5">
+            <font>
+                <Font name="Yu Gothic Medium" size="18.0" />
+            </font>
+        </Label>
+        <JFXButton layoutX="564.0" layoutY="287.0" onAction="#doReloadMovieList" prefHeight="30.0" prefWidth="87.0" styleClass="custom-button" text="Reload" />
+        <Pane fx:id="listMovie" layoutX="25.0" layoutY="287.0" prefHeight="321.0" prefWidth="530.0" />
+        <JFXButton layoutX="564.0" layoutY="163.0" onAction="#doOpenWiki" prefHeight="30.0" prefWidth="87.0" styleClass="custom-button" text="Wiki" />
+    </children>
+   <stylesheets>
+      <URL value="@../css/font.css" />
+      <URL value="@../css/japsearch.css" />
+   </stylesheets>
+</fx:root>

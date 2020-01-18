@@ -1,0 +1,875 @@
+@font-face {
+    src: url("font/Makinas-4-Flat.otf");
+}
+
+.root {
+    /* These are needed for Popup */
+    -fx-background-color: inherit;
+    -fx-background-radius: inherit;
+    -fx-background-insets: inherit;
+    -fx-padding: inherit;
+
+    /****************
+    *                *
+    * AQUA STUFF    *
+    *                *
+    ****************/
+    -fx-text-base-color: black;
+    -fx-text-fill: -fx-text-base-color;
+
+    /* background color for dialogs */
+    /*-fx-background-color: rgb(237.0, 237.0, 237.0);*/
+    /*     default font */
+    /*-fx-font-family: 'lucida-grande';*/
+    -fx-font-family: "Makinas-4-Flat";
+    /*-fx-font-family: "Gen Shin Gothic P Medium";*/
+    -fx-font-size: 13.0;
+    -fx-disabled-opacity: 0.6;
+
+     /* The color to use in ListView/TreeView/TableView to indicate hover. */
+    -fx-cell-hover-color: rgb(182.0, 214.0, 253.0);
+
+    -toggle-selected-base:linear-gradient(rgb(94.0, 94.0, 94.0) 0.0%, rgb(120.0, 120.0, 120.0) 10.0%,
+        rgb(150.0, 150.0, 150.0) 85.0%, rgb(177.0, 177.0, 177.0) 98.0%, rgb(97.0, 97.0, 97.0) 100.0%);
+
+    -toggle-armed-base:linear-gradient(rgb(87.0, 87.0, 87.0) 0.0%, rgb(113.0, 113.0, 113.0) 12.0%,
+        rgb(125.0, 125.0, 125.0) 87.0%, rgb(129.0, 129.0, 129.0) 87.1%, rgb(155.0, 155.0, 155.0) 100.0%);
+
+    -toggle-shadow-armed: linear-gradient(to right, rgb(87.0, 87.0, 87.0, 0.5) 0.0%, transparent 3.0%, transparent 97.0%, rgb(87.0, 87.0, 87.0, 0.5) 100.0%);
+    -toggle-shadow: linear-gradient(to right, rgb(87.0, 87.0, 87.0, 0.3) 0.0%, transparent 3.0%, transparent 97.0%, rgb(87.0, 87.0, 87.0, 0.3) 100.0%);
+
+    -choice-base: linear-gradient(rgb(255.0, 255.0, 255.0) 25.0%, rgb(243.0, 243.0, 243.0) 50.0%, rgb(236.0, 236.0, 236.0) 50.0%, rgb(243.0, 243.0, 243.0) 100.0% );
+}
+
+.mnemonic-underline {
+    -fx-stroke: transparent;
+}
+
+.text {
+    -fx-font-smoothing-type: lcd;
+}
+
+.custom-window {
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(0, 0, 0, 0.87);
+}
+
+.zoomable-scroll-pane {
+   -fx-background-color:transparent;
+}
+
+.zoomable-scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+.scroll-bar
+{
+    -fx-skin: "org.nagoya.view.skin.MinimalScrollBarSkin";
+    -fx-background-color: transparent;
+    -fx-scroll-bar-size: 10;
+}
+
+.scroll-bar .track
+{
+  -fx-stroke-width: 0;
+  -fx-stroke: rgba(60,60,60,0.5);
+  -fx-arc-width: 10px;
+  -fx-arc-height: 10px;
+  -fx-fill: transparent;
+}
+
+.scroll-bar .thumb
+{
+    -fx-fill: rgba(120,120,120,0.4);
+    -fx-arc-width: 10px;
+    -fx-arc-height: 10px;
+}
+
+.tab-pane,
+.list-view,
+.scroll-pane,
+.scroll-pane > .viewport
+{
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+#custom-list-view-bb {
+    -fx-border-width: 1.0;
+    -fx-background-color: white;
+}
+
+#custom-list-view-bn {
+    -fx-border-width: 1.0;
+    -fx-background-color: transparent;
+}
+
+#custom-list-view-nb {
+    -fx-border-width: 0.0;
+    -fx-background-color: white;
+}
+
+#custom-list-view-nn {
+    -fx-border-width: 0.0;
+    -fx-background-color: transparent;
+}
+
+#myTextArea {
+    -fx-background-color: transparent;
+    -fx-text-fill: red;
+}
+
+#myTextArea .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+#myTextArea .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+#myTextArea .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+/* -------------------------- STYLES FOR PAGINATION CONTROL ----- */
+.pagination {
+    -fx-padding: 0.0em; /*0.416667em;*/
+    -fx-arrows-visible: true;
+    -fx-tooltip-visible: false;
+    -fx-page-information-visible: true;
+    -fx-page-information-alignment: bottom;
+    /*-fx-max-page-indicator-count: 20;*/
+}
+.pagination > .page {
+    -fx-background-color: transparent;
+}
+
+.pagination > .pagination-control {
+    -fx-background-color: transparent;
+    -fx-padding: 2.0 0.0 0.0 0.0;
+    -fx-pref-height: 50;
+}
+
+.pagination > .pagination-control > .page-information {
+    -fx-padding: 2 0 2 0;
+    -fx-font-size: 11px;
+    -fx-text-fill: black;
+}
+/* Remove spacing */
+.pagination > .pagination-control > .control-box {
+    -fx-spacing: 0;
+}
+
+/* You can control the actual button sizes here */
+.pagination > .pagination-control > .control-box > .number-button,
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-background-insets: 0, 1;
+    -fx-background-color: lightgray, #FAFAFA;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+
+/* Colors on hover */
+.pagination > .pagination-control > .control-box > .number-button:hover,
+.pagination > .pagination-control > .control-box > .bullet-button:hover,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-background-insets: 0;
+    -fx-background-color: lightgray;
+}
+
+/* Selected toggle color */
+.pagination > .pagination-control > .control-box > .number-button:selected,
+.pagination > .pagination-control > .control-box > .bullet-button:selected{
+    -fx-background-insets: 0;
+    -fx-background-color: #58379A;
+    -fx-text-fill: white;
+}
+
+.image_grid_view {
+    -fx-background-color: transparent;
+    -fx-hgap: 1px;
+    -fx-vgap: 1px;
+    -fx-alignment: center;
+}
+
+.image_grid_view > .image_pane {
+    -fx-background-color: rgba(120,120,120,0.4);
+    -fx-background-insets: 0;
+    -fx-background-radius: 10px;
+    /*-fx-fill: rgba(120,120,120,0.4);
+    -fx-arc-width: 10px;
+    -fx-arc-height: 10px;*/
+}
+
+.image_grid_view > .image_pane > .image_view {
+}
+
+/*.pagination > .pagination-control > .control-box {
+    -fx-spacing: 3.0;
+    -fx-alignment: center;
+}
+
+.pagination > .pagination-control > .control-box > .number-button {
+    -fx-border-radius: 3.0em;
+    -fx-background-radius: 3.0em, 3.0em;
+    -fx-padding: 0.166667em;
+}
+
+.pagination > .pagination-control > .control-box > .left-arrow-button {
+    -fx-border-radius: 3.0em;
+    -fx-background-radius: 3.0em, 3.0em;
+     -fx-padding: 0.166667em 0.416em 0.25em 0.166667em;
+}
+
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-border-radius: 3.0em;
+    -fx-background-radius: 3.0em, 3.0em;
+    -fx-padding: 0.166667em 0.166667em 0.25em 0.25em;
+}
+
+.pagination > .pagination-control .left-arrow {
+    -fx-background-color: rgb(255.0, 255.0, 255.0, 0.5), rgb(71.0, 71.0, 71.0);
+    -fx-background-insets: 1.0 0.0 -1.0 0.0, 0.0;
+    -fx-padding: 0.375em 0.291em 0.375em 0.291em;
+    -fx-shape: "M 0 0 L -13 7 L 0 13 z";
+    -fx-scale-shape: true;
+}
+
+.pagination > .pagination-control .right-arrow {
+    -fx-background-color: rgb(255.0, 255.0, 255.0, 0.5), rgb(71.0, 71.0, 71.0);
+    -fx-background-insets: 1.0 0.0 -1.0 0.0, 0.0;
+    -fx-padding: 0.375em 0.291em 0.375em 0.291em;
+    -fx-shape: "M 0 0 L 13 7 L 0 13 z";
+    -fx-scale-shape: true;
+}
+
+.pagination > .pagination-control > .control-box > .bullet-button {
+    -fx-border-width: 0.5;
+    -fx-border-insets: 3.0;
+    -fx-border-color: rgb(129.0, 129.0, 129.0);
+    -fx-border-radius: 3.0em;
+    -fx-background-color: rgb(250.0, 250.0, 250.0),
+        linear-gradient(
+            rgb(255.0, 255.0, 255.0) 0.0%, rgb(253.0,253.0,253.0) 25.0%,
+            rgb(244.0, 244.0, 244.0) 50.0%, rgb(236.0, 236.0, 236.0) 51.0%,
+            rgb(243.0, 243.0, 243.0) 100.0% );
+    -fx-background-insets: 3.0, 4.0;
+    -fx-background-radius: 3.0em, 3.0em;
+    -fx-padding: 0.0em;
+    -fx-spacing: 14.0;
+}
+
+.pagination > .pagination-control > .control-box > .bullet-button:selected {
+    -fx-border-color: linear-gradient(
+        rgb(100.0, 103.0, 124.0) 0.0%, rgb(92.0, 94.0, 116.0) 100.0%);
+    -fx-background-color:
+        linear-gradient(
+            rgb(228.0, 250.0, 255.0) 0.0%, #91bdee 50.0%,
+            #78b0ee 51.0%, rgb(228.0, 250.0, 255.0) 100.0% );
+    -fx-background-insets: 3.0;
+    -fx-background-radius: 3.0em;
+}
+
+.pagination > .pagination-control > .page-information {
+    -fx-padding: 0.416em 0.0 0.0 0.0;
+}*/
+
+#editable-button {
+    -fx-border-color: dimgray;
+    -fx-border-insets: 1;
+    -fx-border-radius: 4;
+    -fx-padding: 2 10 2 10;
+}
+
+#setting-editor {
+    -fx-min-width: 900;
+    -fx-pref-width: 900;
+    -fx-pref-height: 580;
+}
+
+#setting-editor .vbox {
+    -fx-alignment: top-left;
+    -fx-spacing: 8;
+}
+
+#setting-editor .hbox {
+    -fx-alignment: center-left;
+    -fx-spacing: 8;
+}
+
+#setting-editor .label-main {
+    -fx-border-width: 0.5;
+    -fx-border-insets: 3.0;
+    -fx-border-color: rgb(129.0, 129.0, 129.0);
+    -fx-border-radius: 3.0em;
+    -fx-background-color: rgb(250.0, 250.0, 250.0),
+        linear-gradient(
+            rgb(255.0, 255.0, 255.0) 0.0%, rgb(253.0,253.0,253.0) 25.0%,
+            rgb(244.0, 244.0, 244.0) 50.0%, rgb(236.0, 236.0, 236.0) 51.0%,
+            rgb(243.0, 243.0, 243.0) 100.0% );
+    -fx-background-insets: 3.0, 4.0;
+    -fx-background-radius: 3.0em, 3.0em;
+    -fx-min-width: 200;
+    -fx-padding: 0 10 0 10;
+    -fx-font-size: 13px;
+    -fx-text-fill: black;
+}
+
+#setting-editor .label-sub {
+    -fx-min-width: 200;
+    -fx-font-size: 12px;
+    -fx-padding: 0 10 0 10;
+    -fx-text-fill: dimgray;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * PopupMenu                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.context-menu {
+    -fx-skin: "org.nagoya.view.skin.AquaContextMenuSkin";
+    -fx-border-color: rgb(209.0, 209.0, 209.0, 0.4);
+    -fx-border-width: 0.5;
+    -fx-border-radius: 6.0;
+    -fx-background-color: rgb(255.0, 255.0, 255.0, 0.95);
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 6.0;
+    -fx-padding: 0.25em 0.0em 0.25em 0.0em;
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.6), 8.0, 0.0, 0.0, 0.0 );
+}
+
+.context-menu .button,
+.context-menu .toggle-button,
+.context-menu .toggle-button:selected{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-effect: null;
+}
+
+.context-menu > .separator {
+    -fx-padding: 0.0em 0.333333em 0.0em 0.0em;
+}
+
+.context-menu > .scroll-arrow {
+    -fx-padding: 0.416667em 0.416667em 0.416667em 0.416667em;
+    -fx-background-color: transparent;
+}
+
+.context-menu:show-mnemonics > .mnemonic-underline {
+    -fx-stroke: -fx-text-base-color;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Menu                                                                        *
+ *                                                                             *
+ ******************************************************************************/
+
+.menu {
+    -fx-background-color: transparent;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em;
+}
+
+.menu:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+.menu:show-mnemonics > .mnemonic-underline {
+    -fx-stroke: -fx-text-base-color;
+}
+
+/* This hides the down arrow that would show on a menu placed in a menubar */
+.menu-bar > .container > .menu > .arrow-button > .arrow {
+    -fx-padding: 0.0;
+    -fx-background-color: transparent;
+    -fx-shape: null;
+}
+
+.menu-bar > .container > .menu > .arrow-button {
+    -fx-padding: 0.0;
+}
+
+.menu > .arrow {
+    -fx-background-color: -fx-text-base-color;
+    -fx-shape: "M0,-4L4,0L0,4Z";
+    -fx-scale-shape: false;
+}
+
+.menu:focused:showing > .arrow, .menu:hover:showing > .arrow, .menu:focused > .arrow, .menu:showing > .arrow {
+    -fx-background-color: white;
+}
+
+.menu-up-arrow {
+    -fx-padding: 0.666667em 0.416667em 0.0em 0.416667em;
+    -fx-background-color: rgb(71.0, 71.0, 71.0);
+    -fx-shape: "M0 1 L1 1 L.5 0 Z";
+    -fx-effect: innershadow( two-pass-box , rgba(0.0,0.0,0.0,0.6) , 4.0, 0.0 , 0.0 , 1.0 );
+}
+
+.menu-down-arrow {
+    -fx-background-color: rgb(71.0, 71.0, 71.0);
+    -fx-padding: 0.666667em 0.416667em 0.0em 0.416667em;
+    -fx-shape: "M0 0 L1 0 L.5 1 Z";
+    -fx-effect: innershadow( two-pass-box , rgba(0.0,0.0,0.0,0.6) , 4.0, 0.0 , 0.0 , 1.0 );
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * MenuBar                                                                     *
+ *                                                                             *
+ ******************************************************************************/
+
+.menu-bar {
+    -fx-padding: 0.0em 0.666667em 0.0em 0.666667em; /* 0 8 0 8 */
+    -fx-spacing: 0.166667em;
+     -fx-background-color:
+        linear-gradient(rgb(245.0, 245.0, 245.0), rgb(185.0, 185.0, 185.0));
+    -fx-background-insets:0.0;
+    -fx-border-width: 0.5;
+    -fx-border-insets:-0.5, 0.0 ;
+    -fx-border-color: linear-gradient(rgb(147.0, 147.0, 147.0), rgb(131.0, 131.0, 131.0)),
+        linear-gradient(rgb(116.0, 116.0, 116.0), rgb(105.0, 105.0, 105.0));
+
+    /* Nothing more needed for Mac OS X than the following property!
+     * All other definitions kept from caspian, to ensure, that MenuBar
+     * is shown properly on non-mac systems.
+     */
+    -fx-use-system-menu-bar: true;
+}
+
+.menu-bar > .container > .menu-button {
+    -fx-background-radius: 0.0;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0.0;
+}
+
+.menu-bar > .container > .menu-button > .label {
+    -fx-padding: 0.333em 0.5em 0.333em 0.5em;
+}
+
+.menu-bar > .container > .menu-button:hover, .menu-bar > .container > .menu-button:focused, .menu-bar > .container > .menu-button:showing {
+    -fx-background: #0093ff;
+    -fx-background-color: linear-gradient(to right, rgb(233.0, 233.0, 233.0), rgb(173.0, 173.0, 173.0) 99.0%, rgb(233.0, 233.0, 233.0));
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.menu-bar > .container > .menu-button:hover {
+    -fx-background: #0093ff;
+    -fx-background-color: linear-gradient(to right, rgb(233.0, 233.0, 233.0), rgb(173.0, 173.0, 173.0) 99.0%, rgb(233.0, 233.0, 233.0));
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.menu-bar:show-mnemonics > .mnemonic-underline {
+    -fx-stroke: -fx-text-base-color;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * MenuItem                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.menu-item {
+    -fx-background-color: transparent;
+    -fx-background-insets:0.0;
+    -fx-padding:0.0em 0.0em 0.333333em 0.0em;
+    -fx-border-width: 1.0 0.0 1.0 0.0;
+    -fx-border-color:transparent;
+}
+
+.menu-item > .left-container {
+    -fx-padding: 0.0em 0.0em 0.0em 0.4em;
+}
+
+.menu-item > .graphic-container {
+    -fx-background-color: blue;
+    -fx-padding: 0.0em 0.833em 0.0em 0.0em;
+}
+
+.menu-item >.label {
+   -fx-background-color: transparent;
+   -fx-padding: -0.073333em 2.0em 0.0em 0.33333em ;
+   -fx-text-fill: -fx-text-base-color;
+}
+
+.menu-item:disabled > .label {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+.menu-item:focused {
+    -fx-border-width: 1.0 0.0 1.0 0.0;
+    -fx-border-color: rgb(90.0, 130.0, 235.0) transparent rgb(23.0, 89.0, 231.0) transparent;
+    -fx-background-color: linear-gradient(rgb(101.0, 140.0, 245.0) 0.0%, rgb(41.0, 103.0, 243.0) 100.0%);
+}
+
+.menu-item:focused:disabled {
+    -fx-border-color: transparent;
+    -fx-background-color:transparent;
+    -fx-text-fill: -fx-text-base-color;
+    }
+
+.menu-item:focused > .label {
+    -fx-text-fill: white;
+}
+
+.menu-item:focused:disabled > .label {
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.menu-item > .right-container {
+   -fx-padding: 0.0em 0.833333em 0.0em 0.0em;
+}
+
+.radio-menu-item:checked > .left-container > .radio,
+.check-menu-item:checked > .left-container > .check {
+    -fx-background-color: -fx-text-base-color;
+    -fx-shape: "m 269.9,233.66286 c 0.15,-0.12 1.97,1.7 2.54,3.1 2.3,-7.33 4.09,-9.1 6.79,-12.1 1.5,-0.25 2.4,-0.27 4.36,0.11 -7.1,5.8 -8.8,16.7 -9.9,17.8 l -0.75,0.02 c 0,0 -2.36,-5.24 -5.6,-7.38 -0.27,-0.17 0.02,-1.5 -0.2,-1.6 z";
+    -fx-padding: 0.68em 0.68em 0.0em 0.0em;
+}
+
+.radio-menu-item > .left-container > .radio,
+.check-menu-item > .left-container > .check {
+    -fx-background-color: transparent;
+    -fx-shape: "m 269.9,233.66286 c 0.15,-0.12 1.97,1.7 2.54,3.1 2.3,-7.33 4.09,-9.1 6.79,-12.1 1.5,-0.25 2.4,-0.27 4.36,0.11 -7.1,5.8 -8.8,16.7 -9.9,17.8 l -0.75,0.02 c 0,0 -2.36,-5.24 -5.6,-7.38 -0.27,-0.17 0.02,-1.5 -0.2,-1.6 z";
+    -fx-padding: 0.68em 0.68em 0.0em 0.0em;
+}
+
+.radio-menu-item:focused:checked > .left-container > .radio,
+.check-menu-item:focused:checked > .left-container > .check {
+    -fx-background-color: white;
+}
+
+.menu > .right-container > .arrow {
+    -fx-padding: 0.38em 0.3em 0.38em 0.267em;
+    -fx-background-color: rgb(64.0, 64.0, 64.0);
+    -fx-shape: "M0,-4L4,0L0,4Z";
+}
+
+.menu:selected > .right-container > .arrow {
+    -fx-background-color: white;
+}
+
+.menu-item:show-mnemonics > .mnemonic-underline {
+    -fx-stroke: -fx-text-base-color;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Label                                                                       *
+ *                                                                             *
+ ******************************************************************************/
+
+/*.label {
+    -fx-text-fill: -fx-text-base-color;
+}*/
+
+.label:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+.label:show-mnemonics > .mnemonic-underline {
+    -fx-stroke: -fx-text-base-color;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Hyperlink                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.hyperlink {
+    -fx-cursor: hand;
+    -fx-content-display: LEFT;
+    -fx-text-fill: rgb(94.0, 162.0, 218.0);
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+}
+
+.hyperlink:focused,
+.hyperlink:visited {
+    -fx-underline: false;
+}
+
+.hyperlink:disabled {
+    -fx-text-fill: -fx-text-base-color;
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+.hyperlink:show-mnemonics > .mnemonic-underline {
+    -fx-text-fill: -fx-text-base-color;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Separator                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.separator > .line {
+    -fx-border-width: 0.083333em;
+}
+
+.separator:horizontal > .line {
+    -fx-background-color: null;
+    -fx-padding: 0.133333em 0.0em 0.0em 0.0em;
+    -fx-border-color: rgb(229.0, 229.0, 229.0) transparent transparent transparent;
+}
+
+.separator:vertical > .line {
+    -fx-background-color: null;
+    -fx-padding: 0.0em 0.133333em 0.0em 0.0em;
+    -fx-border-color:  transparent rgb(229.0, 229.0, 229.0) transparent transparent;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * TextField                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+/*
+.text-field {
+    -fx-skin: "org.nagoya.view.skin.AquaTextFieldSkin";
+    -fx-border-color: linear-gradient(rgb(184.0, 184.0, 184.0) 0.0%, rgb(205.0, 205.0, 205.0) 100.0%);
+    -fx-border-width: 0.5;
+    -fx-border-insets: -0.5 0.0 3.0 0.0;
+    -fx-background-color: linear-gradient(rgb(155.0, 155.0, 155.0) 0.0%, rgb(172.0, 172.0, 172.0)  100.0%),
+                             rgb(255.0, 255.0, 255.0),
+                        linear-gradient(rgb(224.0, 224.0, 224.0) 0.0%, rgb(255.0, 255.0, 255.0)  10.0%),
+                        linear-gradient(to right, rgb(224.0, 224.0, 224.0) 0.0%, transparent 1.0%),
+                        linear-gradient(to left, rgb(224.0, 224.0, 224.0) 0.0%, transparent 1.0%);
+    -fx-background-insets: 0.0 0.5 3.5 0.5, 0.5 1.0 4.0 1.0, 0.5 1.0 4.0 1.0, 0.5 1.0 4.0 1.0;
+    -fx-background-radius: 0.0, 0.0;
+
+    -fx-padding: 0.166667em;
+    -fx-text-fill: black;
+    -fx-highlight-fill: rgb(182.0, 214.0, 253.0);
+    -fx-prompt-text-fill: rgb(128.0, 128.0, 128.0);
+    -fx-cursor: text;
+}
+
+.text-field:focused {
+    -fx-highlight-fill: rgb(182.0, 214.0, 253.0);
+    -fx-highlight-text-fill: -fx-text-base-color;
+}
+
+.text-field:disabled {
+    -fx-opacity: 1.0;
+    -fx-background-color: linear-gradient(rgb(155.0, 155.0, 155.0, 0.4) 0.0%, rgb(172.0, 172.0, 172.0, 0.4)  100.0%),
+                             rgb(255.0, 255.0, 255.0),
+                        linear-gradient(rgb(224.0, 224.0, 224.0, 0.4) 0.0%, rgb(255.0, 255.0, 255.0, 0.4)  10.0%),
+                        linear-gradient(to right, rgb(224.0, 224.0, 224.0) 0.0%, transparent 1.0%),
+                        linear-gradient(to left, rgb(224.0, 224.0, 224.0) 0.0%, transparent 1.0%);
+    -fx-border-color: linear-gradient(rgb(184.0, 184.0, 184.0, 0.4) 0.0%, rgb(205.0, 205.0, 205.0, 0.4) 100.0%);
+    -fx-text-fill: rgb(127.0, 127.0, 127.0);
+}*/
+
+.n-text-field {
+    -fx-border-color: linear-gradient(rgb(184.0, 184.0, 184.0) 0.0%, rgb(205.0, 205.0, 205.0) 100.0%);
+    -fx-border-width: 0.5;
+    -fx-border-insets: -0.5 0.0 3.0 0.0;
+    -fx-background-color: linear-gradient(rgb(155.0, 155.0, 155.0) 0.0%, rgb(172.0, 172.0, 172.0)  100.0%),
+                             rgb(255.0, 255.0, 255.0),
+                        linear-gradient(rgb(224.0, 224.0, 224.0) 0.0%, rgb(255.0, 255.0, 255.0)  10.0%),
+                        linear-gradient(to right, rgb(224.0, 224.0, 224.0) 0.0%, transparent 1.0%),
+                        linear-gradient(to left, rgb(224.0, 224.0, 224.0) 0.0%, transparent 1.0%);
+    -fx-background-insets: 0.0 0.5 3.5 0.5, 0.5 1.0 4.0 1.0, 0.5 1.0 4.0 1.0, 0.5 1.0 4.0 1.0;
+    -fx-background-radius: 0.0, 0.0;
+
+    -fx-padding: 0.166667em;
+    -fx-text-fill: black;
+    -fx-highlight-fill: rgb(182.0, 214.0, 253.0);
+    -fx-prompt-text-fill: rgb(128.0, 128.0, 128.0);
+    -fx-cursor: text;
+}
+
+.n-text-field:focused {
+    -fx-highlight-fill: rgb(182.0, 214.0, 253.0);
+    -fx-highlight-text-fill: -fx-text-base-color;
+}
+
+.n-text-field:disabled {
+    -fx-opacity: 1.0;
+    -fx-background-color: linear-gradient(rgb(155.0, 155.0, 155.0, 0.4) 0.0%, rgb(172.0, 172.0, 172.0, 0.4)  100.0%),
+                             rgb(255.0, 255.0, 255.0),
+                        linear-gradient(rgb(224.0, 224.0, 224.0, 0.4) 0.0%, rgb(255.0, 255.0, 255.0, 0.4)  10.0%),
+                        linear-gradient(to right, rgb(224.0, 224.0, 224.0) 0.0%, transparent 1.0%),
+                        linear-gradient(to left, rgb(224.0, 224.0, 224.0) 0.0%, transparent 1.0%);
+    -fx-border-color: linear-gradient(rgb(184.0, 184.0, 184.0, 0.4) 0.0%, rgb(205.0, 205.0, 205.0, 0.4) 100.0%);
+    -fx-text-fill: rgb(127.0, 127.0, 127.0);
+}
+
+/**
+ * SearchField (TextField) specials
+ */
+.text-field.textfield-type-search,
+.text-field.textfield-type-round-rect {
+    -fx-show-search-icon: true;
+    -fx-background-radius: 0.8em, 0.8em, 0.8em, 0.8em, 0.8em;
+    -fx-border-radius: 0.8em, 0.8em;
+    -fx-padding: 0.166667em 1.5em 0.166667em 1.5em;
+    -fx-background-insets: 0.0 0.5 3.5 0.5, 0.5 1.0 4.0 1.0, 0.5 1.0 4.5 1.0, 0.5 1.0 4.0 1.0;
+}
+
+.text-field.textfield-type-round-rect {
+    -fx-padding: 0.166667em 0.5em 0.166667em 0.5em;
+}
+
+.search-icon{
+    -fx-shape: "m 347.69086,521.53432 c -5.66845,0 -9.46303,3.70311 -9.40904,9.34654 0.0462,4.83336 2.77728,9.09947 9.36356,9.36942 1.89611,0.0777 3.71636,-0.61031 5.21024,-1.48298 l 5.84627,6.2327 3.07686,-2.95744 -5.90318,-6.0367 c 1.63819,-2.63376 1.49391,-5.24942 1.31808,-6.58272 -0.73998,-5.61127 -5.42829,-8.03363 -9.50279,-7.88877 z m -0.17048,3.30413 c 4.04899,0.0153 6.11399,3.03614 6.28683,5.56794 0,2.76781 -2.00027,6.12608 -6.17885,6.18457 -3.07717,0.0431 -5.8923,-2.66304 -5.9089,-5.80664 -0.0166,-3.14754 2.30739,-5.67592 5.80092,-5.94587 z";
+    -fx-background-color: rgb(116.0, 116.0, 116.0);
+    -fx-scale-shape: true;
+    -fx-background-insets: 4.5 6.0 8.0 6.0;
+}
+
+.cancel-search-icon{
+    -fx-shape: "m 310.73434,226.07989 c -7.6712,0 -13.90445,6.23325 -13.90445,13.90445 0,7.67119 6.23325,13.87327 13.90445,13.87327 7.67119,0 13.87327,-6.20208 13.87327,-13.87327 l 0,-0.0935 c -0.0471,-7.63764 -6.23552,-13.81097 -13.87327,-13.81097 z m -4.67638,7.17045 4.86344,4.89462 4.86344,-4.89462 1.83937,1.83938 -4.86344,4.89462 4.86344,4.86344 -1.83937,1.83938 -4.86344,-4.89462 -4.86344,4.89462 -1.80821,-1.83938 4.86344,-4.86344 -4.86344,-4.89462 1.80821,-1.83938 z";
+    -fx-background-color: rgb(185.0, 185.0, 185.0);
+    -fx-scale-shape: true;
+    -fx-backgronud-insets: 0.0;
+}
+
+
+.aqua-group-box {
+    -fx-padding: 5.0;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 6.0;
+    -fx-border-insets: 0.0;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 6.0;
+    -fx-border-color: rgb(193.0, 193.0, 193.0);
+    -fx-background-color: rgb(227.0, 227.0, 227.0),
+        linear-gradient(to right, rgb(168.0, 168.0, 168.0, 0.5) 0.0%, transparent 0.4%, transparent 99.6%, rgb(168.0, 168.0, 168.0, 0.5));
+    -fx-effect: innershadow(one-pass-box, rgb(168.0, 168.0, 168.0, 0.6), 4.0, 0.6, 0.0, 2.0);
+}
+
+.list-view {
+    -fx-background-color: white;
+    -fx-background-insets: 0.5;
+    -fx-border-color: rgb(156.0, 156.0, 156.0) rgb(190.0, 190.0, 190.0) rgb(190.0, 190.0, 190.0) rgb(190.0, 190.0, 190.0);
+    -fx-border-width: 1.0;
+    -fx-border-insets: 0.0;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    /*-fx-padding: 0.2em 0.25em 0.2em 0.25em;*/
+    /*-fx-text-fill: -fx-text-base-color;*/
+}
+
+/* ListView Cells do not have a even/odd highlighting
+.list-cell:odd {
+    -fx-background-color: rgb(243.0, 246.0, 250.0);
+} */
+
+/* When the list-cell is selected and focused */
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:focused:selected,
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(rgb(95.0, 165.0, 221.0), rgb(54.0, 124.0, 192.0)),
+     linear-gradient(rgb(116.0, 186.0, 232.0), rgb(116.0, 186.0, 232.0) 1.0%, rgb(109.0, 178.0, 227.0) 1.0%, rgb(59.0, 136.0, 208.0) 100.0%);
+    -fx-background-insets:  0.0, 1.0 0.0 1.0 0.0;
+    -fx-text-fill: white;
+}
+
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:focused:selected > .text,
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected > .text {
+    -fx-effect: dropshadow(one-pass-box , rgba(0.0,0.0,0.0,0.4) , 1.0, 0.1 , 0.0 , 1.0 );
+}
+
+/* When the ListView is _not_ focused, we show alternate selection colors */
+.list-cell:filled:selected:focused,
+.list-cell:filled:selected {
+    -fx-background-color: linear-gradient(rgb(187.0, 197.0, 214.0), rgb(147.0, 160.0, 185.0)),
+     linear-gradient(rgb(195.0, 204.0, 223.0), rgb(195.0, 204.0, 223.0) 1.0%, rgb(189.0, 199.0, 220.0) 1.0%, rgb(155.0, 169.0, 196.0) 100.0%);
+    -fx-background-insets:  0.0, 1.0 0.0 1.0 0.0;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+}
+
+.list-view:horizontal:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(to right, rgb(95.0, 165.0, 221.0), rgb(54.0, 124.0, 192.0)),
+        linear-gradient(to right, rgb(116.0, 186.0, 232.0), rgb(116.0, 186.0, 232.0) 1.0%, rgb(109.0, 178.0, 227.0) 1.0%, rgb(59.0, 136.0, 208.0) 100.0%);
+    -fx-background-insets:  0.0, 0.0 1.0 0.0 1.0;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+}
+
+.list-view:horizontal > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(to right, rgb(187.0, 197.0, 214.0), rgb(147.0, 160.0, 185.0)),
+     linear-gradient(to right, rgb(195.0, 204.0, 223.0), rgb(195.0, 204.0, 223.0) 1.0%, rgb(189.0, 199.0, 220.0) 1.0%, rgb(155.0, 169.0, 196.0) 100.0%);
+    -fx-background-insets:  0.0, 0.0 1.0 0.0 1.0;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+}
+
+.list-view:horizontal > .virtual-flow > .clipped-container > .sheet > .list-cell:odd {
+    -fx-background-color: rgb(243.0, 246.0, 250.0);
+}
+
+#list-view-transparent {
+     -fx-background-color: transparent;
+     -fx-background-insets: 0.5;
+     -fx-border-color: transparent;
+     -fx-border-width: 1.0;
+     -fx-border-insets: 0.0;
+ }
+
+#bk {
+    -fx-alignment: center-right;
+}
+
+#file_list_cell {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-background-radius: 8;
+    -fx-background-insets:  1;
+}
+
+#file_list_cell:folder {
+    -fx-background-color: rgba(195, 195, 195, 0.4);
+}
+
+#file_list_cell_rect {
+    -fx-fill: #1f5cff;
+}
+
+#file_list_cell_rect:hasMovie {
+    -fx-fill: #f84849;
+}
+
+#movie_list_cell {
+    -fx-background-color: rgba(195, 195, 195, 0.4);
+    -fx-background-radius: 8;
+    -fx-background-insets:  1;
+}
+
+#movie_list_cell:virtual {
+    -fx-background-color: rgba(255, 75, 75, 0.3);
+}
+
+.custom-button {
+    -fx-border-color: #AAAAAA;
+    -fx-border-insets: 1;
+    -fx-border-radius: 4;
+}
+
+.custom-button2 {
+	-fx-background-radius: 15px; /* 角を半径30pxの円に設定 */
+	-fx-background-color: linear-gradient(#e8e8e8, #d6d6d6); /* 背景色を設定 */
+	-fx-effect: dropshadow(three-pass-box, rgb(0, 0, 0, 0.6), 4, 0.0, 0, 2); /* 影をつける */
+}
+
+.custom-button2:pressed {
+	-fx-background-color: linear-gradient(#eeeeee, #dddddd); /* 背景色を変化させる */
+	-fx-effect: dropshadow(three-pass-box, rgb(0, 0, 0, 0.6), 2, 0.0, 0, 1); /* 影を変化させる */
+}

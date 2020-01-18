@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="714.0" maxWidth="880.0" minHeight="598.0" minWidth="880.0" prefHeight="598.0" prefWidth="880.0"
+            style="-fx-background-color: #1d5079;" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.nagoya.view.FXMovieDetailCompareView">
+    <Rectangle fill="#fffdfd" height="40.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="880.0"/>
+    <JFXTextField fx:id="txtTitle" alignment="BOTTOM_LEFT" focusColor="WHITE" layoutX="20.0" layoutY="4.0"
+                  prefHeight="30.0"
+                  prefWidth="363.0"
+                  style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: grey; -fx-border-radius: 4;"
+                  text="12345" unFocusColor="WHITE">
+        <font>
+            <Font name="System Bold" size="18.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXTextField fx:id="txtSet" layoutX="106.0" layoutY="213.0" prefHeight="28.0" prefWidth="277.0"
+                  style="-fx-background-color: white;" text="123">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXTextField fx:id="txtId" layoutX="207.0" layoutY="81.0" prefHeight="28.0" prefWidth="176.0"
+                  style="-fx-background-color: white;" text="123">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXTextField fx:id="txtStudio" layoutX="207.0" layoutY="115.0" prefHeight="28.0" prefWidth="176.0"
+                  style="-fx-background-color: white;" text="123">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXTextArea fx:id="txtPlot" layoutX="20.0" layoutY="246.0" prefHeight="98.0" prefWidth="363.0"
+                 style="-fx-background-color: white;" text="111">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0" top="5.0"/>
+        </padding>
+    </JFXTextArea>
+    <JFXListView fx:id="lvGenres0" layoutX="20.0" layoutY="349.0" orientation="HORIZONTAL" prefHeight="40.0"
+                 prefWidth="363.0"/>
+    <JFXTextField fx:id="txtNewTitle" alignment="BOTTOM_LEFT" focusColor="WHITE" layoutX="498.0" layoutY="4.0"
+                  prefHeight="30.0" prefWidth="363.0"
+                  style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: grey; -fx-border-radius: 4;"
+                  text="12345" unFocusColor="WHITE">
+        <font>
+            <Font name="System Bold" size="18.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXTextField fx:id="txtNewSet" layoutX="498.0" layoutY="213.0" prefHeight="28.0" prefWidth="277.0"
+                  style="-fx-background-color: white;" text="123">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXTextField fx:id="txtNewId" layoutX="498.0" layoutY="81.0" prefHeight="28.0" prefWidth="176.0"
+                  style="-fx-background-color: white;" text="123">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXTextField fx:id="txtNewStudio" layoutX="498.0" layoutY="115.0" prefHeight="28.0" prefWidth="176.0"
+                  style="-fx-background-color: white;" text="123">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXToggleButton fx:id="useTitle" layoutX="410.0" layoutY="-10.0" text=" " unToggleColor="#5482a1"
+                     unToggleLineColor="#13124d"/>
+    <JFXToggleButton fx:id="useDate" layoutX="410.0" layoutY="30.0" text=" " unToggleColor="#5482a1"
+                     unToggleLineColor="#13124d"/>
+    <JFXToggleButton fx:id="useId" layoutX="410.0" layoutY="66.0" text=" " unToggleColor="#5482a1"
+                     unToggleLineColor="#13124d"/>
+    <JFXToggleButton fx:id="useStudio" layoutX="410.0" layoutY="100.0" text=" " unToggleColor="#5482a1"
+                     unToggleLineColor="#13124d"/>
+    <JFXToggleButton fx:id="useSet" layoutX="410.0" layoutY="198.0" text=" " unToggleColor="#5482a1"
+                     unToggleLineColor="#13124d"/>
+    <JFXTextArea fx:id="txtNewPlot" layoutX="498.0" layoutY="246.0" prefHeight="98.0" prefWidth="363.0"
+                 style="-fx-background-color: white;">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0" top="5.0"/>
+        </padding>
+    </JFXTextArea>
+    <JFXListView fx:id="lvGenres1" layoutX="498.0" layoutY="349.0" orientation="HORIZONTAL" prefHeight="40.0"
+                 prefWidth="363.0"/>
+    <JFXToggleButton fx:id="usePlot" layoutX="410.0" layoutY="265.0" text=" " unToggleColor="#5482a1"
+                     unToggleLineColor="#13124d"/>
+    <JFXToggleButton fx:id="useGenres" layoutX="410.0" layoutY="341.0" text=" " unToggleColor="#5482a1"
+                     unToggleLineColor="#13124d"/>
+    <JFXToggleButton fx:id="useActors" layoutX="410.0" layoutY="451.0" text=" " unToggleColor="#5482a1"
+                     unToggleLineColor="#13124d"/>
+    <Rectangle arcHeight="35.0" arcWidth="37.0" fill="#d2cda4" height="40.0" layoutX="392.0" layoutY="547.0"
+               stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="99.0"/>
+    <JFXToggleButton fx:id="btnAll" layoutX="395.0" layoutY="533.0" prefHeight="68.0" prefWidth="99.0" size="12.0"
+                     text=" " toggleColor="#eef569" toggleLineColor="#d7af11" unToggleColor="#eff768"
+                     unToggleLineColor="#d7af11"/>
+    <JFXTextField fx:id="txtDirector" layoutX="207.0" layoutY="179.0" prefHeight="28.0" prefWidth="176.0"
+                  style="-fx-background-color: white;" text="123">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXTextField fx:id="txtNewDirector" layoutX="498.0" layoutY="179.0" prefHeight="28.0" prefWidth="176.0"
+                  style="-fx-background-color: white;" text="123">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXToggleButton fx:id="useDirector" layoutX="410.0" layoutY="164.0" text=" " unToggleColor="#5482a1"
+                     unToggleLineColor="#13124d"/>
+    <JFXTextField fx:id="txtMaker" layoutX="207.0" layoutY="147.0" prefHeight="28.0" prefWidth="176.0"
+                  style="-fx-background-color: white;" text="123">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXTextField fx:id="txtNewMaker" layoutX="498.0" layoutY="147.0" prefHeight="28.0" prefWidth="176.0"
+                  style="-fx-background-color: white;" text="123">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXToggleButton fx:id="useMaker" layoutX="409.0" layoutY="132.0" text=" " unToggleColor="#5482a1"
+                     unToggleLineColor="#13124d"/>
+    <Label fx:id="txtExtraImage" layoutX="770.0" layoutY="131.0" prefHeight="20.0" prefWidth="99.0" text="Extra Image"
+           textFill="WHITE">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+    <JFXButton fx:id="btnExtraFanArt" layoutX="768.0" layoutY="156.0" prefHeight="40.0" prefWidth="31.0"
+               styleClass="custom-button" stylesheets="@../css/fileListButton.css" text="test"
+               textOverrun="CLIP">
+        <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="FILE_PHOTO_ALT" size="22"/>
+        </graphic>
+    </JFXButton>
+    <JFXToggleButton fx:id="btnUseCover" layoutX="701.0" layoutY="39.0" text="Use Cover" textFill="WHITE"
+                     unToggleColor="#5482a1" unToggleLineColor="#13124d"/>
+    <JFXToggleButton fx:id="btnUseExtra" layoutX="701.0" layoutY="74.0" text="Use Extra Image" textFill="WHITE"
+                     unToggleColor="#5482a1" unToggleLineColor="#13124d"/>
+    <Separator layoutX="760.0" layoutY="130.0" orientation="VERTICAL" prefHeight="68.0" prefWidth="6.0"/>
+    <Label graphicTextGap="6.0" layoutX="713.0" layoutY="131.0" prefHeight="20.0"
+           prefWidth="47.0" text="Cover" textFill="WHITE">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+    <JFXButton fx:id="btnCover" layoutX="708.0" layoutY="156.0" prefHeight="40.0" prefWidth="31.0"
+               styleClass="custom-button" stylesheets="@../css/fileListButton.css" text="test"
+               textOverrun="CLIP">
+        <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="FILE_PHOTO_ALT" size="22"/>
+        </graphic>
+    </JFXButton>
+    <JFXTextField fx:id="txtDate" layoutX="207.0" layoutY="47.0" prefHeight="28.0" prefWidth="176.0"
+                  style="-fx-background-color: white;" text="123">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <JFXTextField fx:id="txtNewDate" layoutX="498.0" layoutY="47.0" prefHeight="28.0" prefWidth="176.0"
+                  style="-fx-background-color: white;" text="123">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+    </JFXTextField>
+    <Pane fx:id="paneActors0" layoutX="119.0" layoutY="392.0" prefHeight="200.0" prefWidth="264.0"/>
+    <Pane fx:id="paneActors1" layoutX="498.0" layoutY="392.0" prefHeight="200.0" prefWidth="264.0"/>
+</AnchorPane>

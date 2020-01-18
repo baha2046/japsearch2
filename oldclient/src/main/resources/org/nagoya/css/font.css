@@ -1,0 +1,85 @@
+
+@font-face {
+    src: url("font/Makinas-4-Flat.otf");
+}
+
+@font-face {
+    src: url("font/GenShinGothic-P-Medium.ttf");
+}
+
+@font-face {
+    src: url("font/OtsutomeFont_Ver3.ttf");
+}
+
+.root {
+    -fx-font-family: "Makinas-4-Flat";
+    -fx-font-size: 13.0;
+}
+
+#text {
+    -fx-font-family: "Gen Shin Gothic P Medium";
+    -fx-font-weight: bold;
+}
+
+.text_movie_detail_cell {
+    -fx-font-family: "Gen Shin Gothic P Medium";
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.text_jp_12 {
+    -fx-font-family: "Makinas-4-Flat";
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.text_jp_14 {
+    -fx-font-family: "Makinas-4-Flat";
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.text_jp_16 {
+    -fx-font-family: "Makinas-4-Flat";
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.text_jp_20 {
+    /*-fx-font-family: "源真ゴシックP Medium";*/
+    -fx-font-family: "Otsutome_font Bold";
+    -fx-font-weight: normal;
+    -fx-font-size: 20px;
+}
+
+.text_jp_18 {
+    -fx-font-family: "Gen Shin Gothic P Medium";
+     -fx-font-weight: normal;
+     -fx-font-size: 18px;
+}
+
+.text_jp_name_18 {
+    -fx-font-family: "Otsutome_font Bold";
+    -fx-font-weight: normal;
+    -fx-font-size: 18px;
+}
+
+.text_jp_name_16 {
+    -fx-font-family: "Otsutome_font Bold";
+    -fx-font-weight: normal;
+    -fx-font-size: 16px;
+}
+
+.text_jp_name_13 {
+    -fx-font-family: "Otsutome_font Bold";
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+#file_list_cell_title {
+    -fx-font-family: "Otsutome_font Bold";
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+

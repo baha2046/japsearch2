@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="710.0" prefWidth="484.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.nagoya.controller.FXFileListControl">
+    <Pane prefHeight="174.0" prefWidth="484.0" style="-fx-background-color: #363948; -fx-background-radius: 15;">
+        <JFXButton fx:id="btnBrowse" contentDisplay="CENTER" layoutX="22.0" layoutY="26.0" maxHeight="29.0"
+                   maxWidth="80.0" minHeight="29.0" minWidth="80.0" onAction="#browseAction" prefHeight="29.0"
+                   prefWidth="80.0" ripplerFill="#f88b96" styleClass="custom-button"
+                   stylesheets="@../css/fileListButton.css" text="Browse" textFill="#e8f0fa"/>
+        <JFXButton fx:id="btnUp" contentDisplay="CENTER" layoutX="109.0" layoutY="26.0" maxHeight="29.0" maxWidth="80.0"
+                   minHeight="29.0" minWidth="62.0" onAction="#upDirectoryAction" prefHeight="29.0" prefWidth="62.0"
+                   ripplerFill="#f88b96" styleClass="custom-button"
+                   stylesheets="@../css/fileListButton.css" text="Up" textFill="#e8f0fa"/>
+        <JFXButton fx:id="btnReload" contentDisplay="CENTER" layoutX="171.0" layoutY="26.0" maxHeight="29.0"
+                   maxWidth="80.0" minHeight="29.0" minWidth="73.0" onAction="#reloadAction" prefHeight="29.0"
+                   prefWidth="73.0" ripplerFill="#f88b96" styleClass="custom-button"
+                   stylesheets="@../css/fileListButton.css" text="Reload" textFill="#e8f0fa"/>
+        <JFXButton fx:id="btnSort" contentDisplay="CENTER" layoutX="328.0" layoutY="99.0" maxHeight="40.0"
+                   maxWidth="133.0" minHeight="29.0" minWidth="88.0" onAction="#sortAction" prefHeight="29.0"
+                   prefWidth="133.0" ripplerFill="#f88b96" styleClass="custom-button"
+                   stylesheets="@../css/fileListButton.css" text="Actor Database" textFill="#e8f0fa"/>
+        <JFXButton fx:id="btnRenameAll" contentDisplay="CENTER" layoutX="348.0" layoutY="26.0" maxHeight="29.0"
+                   maxWidth="113.0" minHeight="29.0" minWidth="80.0" onAction="#renameAllAction" prefHeight="29.0"
+                   prefWidth="113.0" ripplerFill="#f88b96" styleClass="custom-button"
+                   stylesheets="@../css/fileListButton.css" text="Rename All" textFill="#e8f0fa"/>
+        <JFXButton fx:id="btnCreateDirectory" contentDisplay="CENTER" layoutX="244.0" layoutY="26.0" maxHeight="29.0"
+                   maxWidth="113.0" minHeight="29.0" minWidth="71.0" onAction="#createDirectoryAction" prefHeight="29.0"
+                   prefWidth="104.0" ripplerFill="#f88b96" styleClass="custom-button"
+                   stylesheets="@../css/fileListButton.css" text="Create Folder" textFill="#e8f0fa"/>
+        <JFXButton fx:id="btnCreateDirectoryMulti" contentDisplay="CENTER" layoutX="328.0" layoutY="128.0"
+                   maxHeight="29.0" maxWidth="133.0" minHeight="29.0" minWidth="71.0"
+                   onAction="#createDirectoryMultiAction" prefHeight="29.0" prefWidth="133.0" ripplerFill="#f88b96"
+                   styleClass="custom-button" stylesheets="@../css/fileListButton.css" text="Grid View"
+                   textFill="#e8f0fa"/>
+        <Label layoutX="22.0" layoutY="75.0" text="Unity" textFill="WHITE"/>
+        <SplitMenuButton fx:id="spMoveMenu" layoutX="62.0" layoutY="130.0" mnemonicParsing="false" prefHeight="25.0"
+                         prefWidth="110.0" text="Operation">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Action 1"/>
+                <MenuItem mnemonicParsing="false" text="Action 2"/>
+            </items>
+        </SplitMenuButton>
+        <SplitMenuButton fx:id="spFilterMenu" layoutX="223.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0"
+                         prefWidth="97.0" text="Filter">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Action 1"/>
+                <MenuItem mnemonicParsing="false" text="Action 2"/>
+            </items>
+        </SplitMenuButton>
+        <SplitMenuButton fx:id="spSearchMenu" layoutX="62.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0"
+                         prefWidth="110.0" text="Search">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Action 1"/>
+                <MenuItem mnemonicParsing="false" text="Action 2"/>
+            </items>
+        </SplitMenuButton>
+        <Label layoutX="189.0" layoutY="75.0" text="Filter" textFill="WHITE"/>
+        <SplitMenuButton fx:id="spShortcutMenu" layoutX="62.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0"
+                         prefWidth="110.0" text="Shortcut">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Action 1"/>
+                <MenuItem mnemonicParsing="false" text="Action 2"/>
+            </items>
+        </SplitMenuButton>
+        <effect>
+            <InnerShadow blurType="TWO_PASS_BOX"/>
+        </effect>
+    </Pane>
+    <Pane fx:id="listViewPane" layoutY="175.0" prefHeight="535.0" prefWidth="484.0"/>
+</AnchorPane>

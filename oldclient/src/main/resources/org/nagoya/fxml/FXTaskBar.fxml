@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0"
+            prefWidth="1400.0" styleClass="custom-window" stylesheets="@../css/window.css"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.nagoya.controller.FXTaskBarControl">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e4e8" height="38.0" layoutX="55.0" layoutY="8.0"
+                   stroke="BLACK" strokeType="INSIDE" width="200.0"/>
+        <HBox fx:id="windowBar" alignment="CENTER_LEFT" layoutX="273.0" layoutY="10.0" prefHeight="38.0"
+              prefWidth="580.0"/>
+        <HBox fx:id="taskBar" alignment="CENTER_LEFT" layoutX="860.0" layoutY="10.0" prefHeight="38.0"
+              prefWidth="385.0"/>
+        <JFXButton fx:id="avButton" buttonType="RAISED" layoutX="72.0" layoutY="15.0" onAction="#doAvAction"
+                   ripplerFill="WHITE" text="AV Mode"/>
+        <JFXButton fx:id="mangaButton" buttonType="RAISED" layoutX="151.0" layoutY="15.0" onAction="#doMangaAction"
+                   ripplerFill="WHITE" text="Manga Mode"/>
+    </children>
+</AnchorPane>

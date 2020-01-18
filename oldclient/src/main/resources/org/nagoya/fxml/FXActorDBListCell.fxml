@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="100.0" prefWidth="488.0" style="-fx-background-color: transparent;"
+         type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1"
+         xmlns:fx="http://javafx.com/fxml/1">
+    <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#f0e5d0" height="48.0" layoutX="113.0" layoutY="47.0"
+               stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="241.0"/>
+    <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="22.0" layoutX="118.0" layoutY="51.0" stroke="BLACK"
+               strokeType="INSIDE" strokeWidth="0.0" width="87.0"/>
+    <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#f2ede4" height="48.0" layoutX="361.0" layoutY="47.0"
+               stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="54.0"/>
+    <JFXButton fx:id="btnSave" layoutX="428.0" layoutY="15.0" maxHeight="29.0" maxWidth="45.0" minHeight="29.0"
+               minWidth="45.0" onAction="#doDMMUpdate" prefHeight="29.0" prefWidth="45.0" styleClass="custom-button"
+               stylesheets="@../css/fileListButton.css" textOverrun="CLIP">
+        <graphic>
+            <FontAwesomeIconView fill="#4a4949" glyphName="FILE" size="22"/>
+        </graphic>
+    </JFXButton>
+    <JFXButton fx:id="btnImage" layoutX="2.0" layoutY="2.0" maxHeight="96.0" maxWidth="96.0" minHeight="96.0"
+               minWidth="96.0" prefHeight="96.0" prefWidth="96.0">
+        <graphic>
+            <ImageView fx:id="imgActor" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true"
+                       style="-fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.4), 3, 0.0, 2, 2);"/>
+        </graphic>
+    </JFXButton>
+    <JFXButton fx:id="btnDel" alignment="CENTER" layoutX="428.0" layoutY="49.0" maxHeight="29.0" maxWidth="45.0"
+               minHeight="29.0" minWidth="45.0" onAction="#removeActorAction" prefHeight="29.0" prefWidth="45.0"
+               styleClass="custom-button" stylesheets="@../css/fileListButton.css" textOverrun="CLIP">
+        <graphic>
+            <FontAwesomeIconView fill="#4a4949" glyphName="USER_TIMES" size="22"/>
+        </graphic>
+    </JFXButton>
+    <FontAwesomeIconView fill="#363434" glyphName="FILM" layoutX="140.0" layoutY="66.0" selectionFill="#191818"
+                         size="14"/>
+    <Label fx:id="txtBirth" alignment="CENTER" layoutX="206.0" layoutY="53.0" prefHeight="19.0" prefWidth="144.0"
+           styleClass="text_jp_name_13" stylesheets="@../css/font.css" text="Label"
+           textAlignment="CENTER" textFill="#746b6b">
+        <font>
+            <Font name="System Bold" size="13.0"/>
+        </font>
+    </Label>
+    <Label fx:id="txtSize" alignment="CENTER" layoutX="112.0" layoutY="73.0" prefHeight="19.0" prefWidth="241.0"
+           styleClass="text_jp_name_13" stylesheets="@../css/font.css" text="Label"
+           textAlignment="CENTER" textFill="#746b6b">
+        <font>
+            <Font name="System Bold" size="13.0"/>
+        </font>
+    </Label>
+    <Label fx:id="txtName" layoutX="118.0" layoutY="23.0" prefHeight="22.0" prefWidth="221.0"
+           styleClass="text_jp_name_16" stylesheets="@../css/font.css" text="Label"
+           textAlignment="CENTER" textFill="#746b6b">
+        <font>
+            <Font name="System Bold" size="15.0"/>
+        </font>
+    </Label>
+    <Label fx:id="txtYomi" layoutX="118.0" layoutY="8.0" prefHeight="19.0" prefWidth="222.0" styleClass="text_jp_12"
+           stylesheets="@../css/font.css" text="Label" textAlignment="CENTER" textFill="#af9f9f">
+        <font>
+            <Font name="System Bold" size="13.0"/>
+        </font>
+    </Label>
+    <Label fx:id="txtCount" alignment="CENTER" layoutX="149.0" layoutY="52.0" prefHeight="19.0" prefWidth="46.0"
+           text="000" textAlignment="CENTER" textFill="#746b6b">
+        <font>
+            <Font name="System Bold" size="13.0"/>
+        </font>
+    </Label>
+    <Label fx:id="txtAge" alignment="CENTER" layoutX="362.0" layoutY="45.0" prefHeight="19.0" prefWidth="53.0" text="88"
+           textAlignment="CENTER" textFill="#746b6b">
+        <font>
+            <Font size="36.0"/>
+        </font>
+    </Label>
+</fx:root>

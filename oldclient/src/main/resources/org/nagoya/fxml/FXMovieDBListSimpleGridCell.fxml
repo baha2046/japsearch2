@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="360.0" prefWidth="160.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <Rectangle fx:id="rect" arcHeight="25.0" arcWidth="25.0" fill="#e8f7fa" height="356.0" layoutX="2.0" layoutY="2.0" mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-opacity: 0.7;" width="156.0">
+        <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+        </effect>
+    </Rectangle>
+    <Label fx:id="txtTitle" alignment="CENTER" layoutX="7.0" layoutY="239.0" maxHeight="156.0" maxWidth="417.0" minHeight="24.0" minWidth="104.0" mouseTransparent="true" prefHeight="118.0" prefWidth="147.0" style="-fx-alignment: center;" styleClass="text_jp_name_16" text="古川いおり 緊縛監禁 完全緊縛で犯され続けメス堕ちした美人女医" textFill="#5f5858" wrapText="true">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+        <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#dad8d8" spread="0.81" />
+        </effect>
+    </Label>
+    <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#0a4277" height="27.0" layoutX="12.0" layoutY="7.0" mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="138.0">
+      <effect>
+         <InnerShadow blurType="TWO_PASS_BOX" color="#d2d1d1" />
+      </effect></Rectangle>
+    <Label fx:id="txtId" alignment="CENTER" layoutX="16.0" layoutY="7.0" mouseTransparent="true" prefHeight="27.0" prefWidth="130.0" styleClass="text_jp_16" text="XXX-100" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Label>
+    <StackPane layoutX="7.0" layoutY="39.0" prefHeight="200.0" prefWidth="147.0">
+        <children>
+            <ImageView fx:id="imgCover" fitHeight="200.0" fitWidth="147.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                <effect>
+                    <InnerShadow blurType="ONE_PASS_BOX" />
+                </effect>
+            </ImageView>
+        </children>
+    </StackPane>
+   <stylesheets>
+      <URL value="@../css/font.css" />
+      <URL value="@../css/japsearch.css" />
+   </stylesheets>
+</fx:root>

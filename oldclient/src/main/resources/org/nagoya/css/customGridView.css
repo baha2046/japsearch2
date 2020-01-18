@@ -1,0 +1,85 @@
+.custom-grid-view > .virtual-flow > .scroll-bar,
+.custom-grid-view > .virtual-flow > .scroll-bar .decrement-arrow,
+.custom-grid-view > .virtual-flow > .scroll-bar .increment-arrow,
+.custom-grid-view > .virtual-flow > .scroll-bar .decrement-button,
+.custom-grid-view > .virtual-flow > .scroll-bar .increment-button {
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+}
+
+.custom-grid-view .custom-scroll-bar:vertical .thumb {
+    -fx-background-insets: 0 2 0 0;
+}
+
+.custom-grid-view .custom-scroll-bar:horizontal .thumb {
+    -fx-background-insets: 0 0 2 0;
+}
+
+.custom-grid-view .custom-scroll-bar .decrement-arrow,
+.custom-grid-view .custom-scroll-bar .increment-arrow {
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+}
+
+.custom-grid-view .custom-scroll-bar {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12;
+    -fx-pref-height: 12;
+    -fx-padding: 2;
+}
+
+.custom-grid-view .custom-scroll-bar .thumb {
+    -fx-background-color: rgba(0, 0, 0, .2);
+    -fx-background-radius: 1000;
+    -fx-pref-width: 12;
+    -fx-pref-height: 12;
+}
+
+/* When the list-cell is selected and focused */
+.custom-grid-view:focused > .virtual-flow > .clipped-container > .sheet > .custom-grid-cell:filled:focused:selected,
+.custom-grid-view:focused > .virtual-flow > .clipped-container > .sheet > .custom-grid-cell:filled:selected {
+    -fx-background-color: linear-gradient(rgb(95.0, 165.0, 221.0), rgb(54.0, 124.0, 192.0)),
+     linear-gradient(rgb(116.0, 186.0, 232.0), rgb(116.0, 186.0, 232.0) 1.0%, rgb(109.0, 178.0, 227.0) 1.0%, rgb(59.0, 136.0, 208.0) 100.0%);
+    -fx-background-insets:  0.0, 1.0 0.0 1.0 0.0;
+    -fx-text-fill: white;
+}
+
+.custom-grid-view:focused > .virtual-flow > .clipped-container > .sheet > .custom-grid-cell:filled:focused:selected > .text,
+.custom-grid-view:focused > .virtual-flow > .clipped-container > .sheet > .custom-grid-cell:filled:selected > .text {
+    -fx-effect: dropshadow(one-pass-box , rgba(0.0,0.0,0.0,0.4) , 1.0, 0.1 , 0.0 , 1.0 );
+}
+
+.custom-grid-cell:selected:hover,
+.custom-grid-cell:selected {
+    -fx-background-color: linear-gradient(rgb(95.0, 165.0, 221.0), rgb(54.0, 124.0, 192.0)), white;
+    -fx-background-insets:  -2, 2;
+    -fx-background-radius: 15, 15;
+}
+
+.custom-grid-cell:hover {
+    -fx-background-color: #eaa7a3, white;
+    -fx-background-insets:  -3, 0;
+    -fx-background-radius: 15, 15;
+}
+/* When the ListView is _not_ focused, we show alternate selection colors
+.custom-grid-cell:filled:selected:focused,
+.custom-grid-cell:filled:selected {
+    -fx-background-color: linear-gradient(rgb(187.0, 197.0, 214.0), rgb(147.0, 160.0, 185.0)),
+     linear-gradient(rgb(195.0, 204.0, 223.0), rgb(195.0, 204.0, 223.0) 1.0%, rgb(189.0, 199.0, 220.0) 1.0%, rgb(155.0, 169.0, 196.0) 100.0%);
+    -fx-background-insets:  0.0, 1.0 0.0 1.0 0.0;
+    -fx-text-fill: white;
+}*/
+
+.custom-grid-view:horizontal:focused > .virtual-flow > .clipped-container > .sheet > .custom-grid-cell:filled:selected {
+    -fx-background-color: linear-gradient(to right, rgb(95.0, 165.0, 221.0), rgb(54.0, 124.0, 192.0)),
+        linear-gradient(to right, rgb(116.0, 186.0, 232.0), rgb(116.0, 186.0, 232.0) 1.0%, rgb(109.0, 178.0, 227.0) 1.0%, rgb(59.0, 136.0, 208.0) 100.0%);
+    -fx-background-insets:  0.0, 0.0 1.0 0.0 1.0;
+    -fx-text-fill: white;
+}
+
+.custom-grid-view:horizontal > .virtual-flow > .clipped-container > .sheet > .custom-grid-cell:filled:selected {
+    -fx-background-color: linear-gradient(to right, rgb(187.0, 197.0, 214.0), rgb(147.0, 160.0, 185.0)),
+     linear-gradient(to right, rgb(195.0, 204.0, 223.0), rgb(195.0, 204.0, 223.0) 1.0%, rgb(189.0, 199.0, 220.0) 1.0%, rgb(155.0, 169.0, 196.0) 100.0%);
+    -fx-background-insets:  0.0, 0.0 1.0 0.0 1.0;
+    -fx-text-fill: white;
+}

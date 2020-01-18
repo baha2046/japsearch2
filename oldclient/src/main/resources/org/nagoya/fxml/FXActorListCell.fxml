@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="100.0" prefWidth="248.0" style="-fx-background-color: transparent;"
+         type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1"
+         xmlns:fx="http://javafx.com/fxml/1">
+    <Rectangle fx:id="mask" arcHeight="5.0" arcWidth="5.0" fill="#fcdba2" height="23.0" layoutX="104.0" layoutY="31.0"
+               stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="139.0"/>
+    <JFXTextField fx:id="txtName" layoutX="104.0" layoutY="26.0" prefHeight="30.0" prefWidth="139.0"
+                  style="-fx-text-fill: #324354;" styleClass="text_jp_name_16"
+                  stylesheets="@../css/font.css" text="123">
+        <font>
+            <Font name="System Bold" size="14.0"/>
+        </font>
+    </JFXTextField>
+    <JFXToggleButton fx:id="btnEdit" layoutX="102.0" layoutY="61.0" prefHeight="38.0" prefWidth="46.0" size="5.0"
+                     text="E"/>
+    <JFXButton fx:id="btnSave" layoutX="154.0" layoutY="65.0" maxHeight="29.0" maxWidth="45.0" minHeight="29.0"
+               minWidth="45.0" onAction="#saveAction" prefHeight="29.0" prefWidth="45.0" styleClass="custom-button"
+               stylesheets="@../css/fileListButton.css" textOverrun="CLIP">
+        <graphic>
+            <FontAwesomeIconView fill="#4a4949" glyphName="CHECK_CIRCLE" size="22"/>
+        </graphic>
+    </JFXButton>
+    <JFXButton fx:id="btnImage" layoutX="2.0" layoutY="2.0" maxHeight="96.0" maxWidth="96.0" minHeight="96.0"
+               minWidth="96.0" onAction="#editImageAction" prefHeight="96.0" prefWidth="96.0">
+        <graphic>
+            <ImageView fx:id="imgActor" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                <effect>
+                    <InnerShadow/>
+                </effect>
+            </ImageView>
+        </graphic>
+    </JFXButton>
+    <JFXButton fx:id="btnDel" alignment="CENTER" layoutX="200.0" layoutY="65.0" maxHeight="29.0" maxWidth="45.0"
+               minHeight="29.0" minWidth="45.0" onAction="#deleteAction" prefHeight="29.0" prefWidth="45.0"
+               styleClass="custom-button" stylesheets="@../css/fileListButton.css" textOverrun="CLIP">
+        <graphic>
+            <FontAwesomeIconView fill="#4a4949" glyphName="USER_TIMES" size="22"/>
+        </graphic>
+    </JFXButton>
+    <Label fx:id="txtAge" alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" layoutX="210.0" layoutY="5.0"
+           prefHeight="22.0" prefWidth="29.0" styleClass="text_jp_name_18"
+           stylesheets="@../css/font.css" text="88" textFill="#ff87a5">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <Label fx:id="txtYomi" layoutX="105.0" layoutY="9.0" mouseTransparent="true" prefHeight="19.0" prefWidth="118.0"
+           styleClass="text_jp_12" stylesheets="@../css/font.css" text="XXX-100" textFill="#716a6a">
+        <font>
+            <Font name="System Bold" size="13.0"/>
+        </font>
+    </Label>
+</fx:root>

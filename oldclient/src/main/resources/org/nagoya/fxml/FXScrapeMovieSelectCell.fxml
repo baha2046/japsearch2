@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxWidth="500.0" minWidth="500.0" prefHeight="125.0" prefWidth="500.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <Label fx:id="txtTitle" layoutX="118.0" layoutY="6.0" maxHeight="94.0" maxWidth="363.0" minHeight="24.0" minWidth="104.0" prefHeight="46.0" prefWidth="363.0" style="-fx-alignment: center;" text="Label" textFill="#2f2e2e" wrapText="true">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+      <styleClass>
+         <String fx:value="custom-button" />
+         <String fx:value="text_jp_name_18" />
+      </styleClass>
+    </Label>
+    <ImageView fx:id="imgCover" fitHeight="110.0" fitWidth="94.0" layoutX="13.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+    </ImageView>
+    <Label fx:id="txtTitle2" layoutX="118.0" layoutY="56.0" maxHeight="94.0" maxWidth="363.0" minHeight="24.0" minWidth="104.0" prefHeight="64.0" prefWidth="363.0" style="-fx-alignment: center;" text="Label" textFill="#4f61ab" wrapText="true">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+      <styleClass>
+         <String fx:value="custom-button" />
+         <String fx:value="text_jp_14" />
+      </styleClass>
+    </Label>
+   <stylesheets>
+      <URL value="@../css/font.css" />
+      <URL value="@../css/japsearch.css" />
+   </stylesheets>
+</fx:root>

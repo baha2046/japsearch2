@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="80.0" maxWidth="480.0" prefHeight="80.0" prefWidth="480.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#f87849" height="6.0" layoutX="108.0" layoutY="34.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="344.0" />
+    <Label fx:id="txtName" layoutX="109.0" layoutY="7.0" minWidth="244.0" prefHeight="23.0" prefWidth="309.0" styleClass="text_jp_name_18" text="Label" textAlignment="RIGHT">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+        <textFill>
+            <LinearGradient>
+                <stops>
+                    <Stop color="#727275" />
+                    <Stop color="#5211dd" offset="1.0" />
+                </stops>
+            </LinearGradient>
+        </textFill>
+    </Label>
+    <ImageView fx:id="imgLogo" fitHeight="40.0" fitWidth="67.0" layoutX="17.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+        <viewport>
+            <Rectangle2D height="40.0" width="67.0" />
+        </viewport>
+    </ImageView>
+    <Separator layoutX="101.0" layoutY="3.0" orientation="VERTICAL" prefHeight="40.0" />
+   <Label fx:id="txtDesc" layoutX="15.0" layoutY="46.0" prefHeight="34.0" prefWidth="435.0" text="11111" textAlignment="RIGHT" textOverrun="CLIP" wrapText="true" />
+   <stylesheets>
+      <URL value="@../css/font.css" />
+      <URL value="@../css/japsearch.css" />
+   </stylesheets>
+</fx:root>

@@ -1,0 +1,33 @@
+/*.custom-list-view > .virtual-flow > .scroll-bar,
+.custom-list-view > .virtual-flow > .scroll-bar .decrement-arrow,
+.custom-list-view > .virtual-flow > .scroll-bar .increment-arrow,
+.custom-list-view > .virtual-flow > .scroll-bar .decrement-button,
+.custom-list-view > .virtual-flow > .scroll-bar .increment-button {
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+}
+
+.custom-list-view .custom-scroll-bar:vertical .thumb {
+    -fx-background-insets: 0 2 0 0;
+}
+
+.custom-list-view .custom-scroll-bar:horizontal .thumb {
+    -fx-background-insets: 0 0 2 0;
+}*/
+
+
+.custom_list_view_border_true {
+    -fx-border-width: 1.0;
+}
+
+.custom_list_view_border_false {
+    -fx-border-width: 0.0;
+}
+
+.custom_list_view_bg_true {
+    -fx-background-color: white;
+}
+
+.custom_list_view_bg_false {
+    -fx-background-color: transparent;
+}
